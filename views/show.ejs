@@ -14,9 +14,15 @@
 
       <h1><%=products.name%></h1>
       <img class="showImg" src="<%=products.img%>" alt="pic"><br />
+      Brand: <%=products.brand%><br/>
       Season: <%=products.season%><br/>
       Price: $<%=products.price%><br/>
-      Description: <%=products.description%><br/>
+      Description:
+      <ul>
+      <% if (i = 0, i < products.description.length, i++) { %>
+        <li><%=products.description[i]%></li>
+    <% } %>
+    </ul>
       <a href="<%=products.link%>">Click Here to Purchase</a><br/>
       <form action="/ootd/<%=products.id%>/edit">
         <input class="button" type="submit" value="Edit Product">
