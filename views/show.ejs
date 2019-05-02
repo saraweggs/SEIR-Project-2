@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/app.css">
+    <title></title>
+  </head>
+  <body>
+  <div class="header">
+    <h1 class="logo">OOTD</h1><a class="add-link" href="/ootd">Back to Product List</a>
+  </div>
+  <div class="item-box">
+    <div class="show-container">
+
+      <h1><%=products.name%></h1>
+      <img class="showImg" src="<%=products.img%>" alt="pic"><br />
+      Season: <%=products.season%><br/>
+      Price: $<%=products.price%><br/>
+      Description: <%=products.description%><br/>
+      <a href="<%=products.link%>">Click Here to Purchase</a><br/>
+      <form action="/ootd/<%=products.id%>/edit">
+        <input class="button" type="submit" value="Edit Product">
+      </form>
+
+      <form action="/ootd/<%=products.id%>?_method=DELETE" method="POST">
+        <input class="deleteBtn" type="submit" value="Delete Product">
+      </form>
+    </div>
+  </div>
+</body>
+</html>
