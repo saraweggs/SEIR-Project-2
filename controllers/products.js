@@ -25,6 +25,42 @@ router.get('/', (req, res) => {
   })
 })
 
+// FALL ROUTE
+router.get('/fall', (req, res) => {
+  Product.find({season: 'Fall'}, (error, fallProducts) => {
+    res.render('fall.ejs', {
+      products: fallProducts
+    })
+  })
+})
+
+// WINTER ROUTE
+router.get('/winter', (req, res) => {
+  Product.find({season: 'Winter'}, (error, winterProducts) => {
+    res.render('winter.ejs', {
+      products: winterProducts
+    })
+  })
+})
+
+// SPRING ROUTE
+router.get('/spring', (req, res) => {
+  Product.find({season: 'Spring'}, (error, springProducts) => {
+    res.render('spring.ejs', {
+      products: springProducts
+    })
+  })
+})
+
+// SUMMER ROUTE
+router.get('/summer', (req, res) => {
+  Product.find({season: 'Summer'}, (error, summerProducts) => {
+    res.render('summer.ejs', {
+      products: summerProducts
+    })
+  })
+})
+
 // DELETE ROUTE
 router.delete('/:id', (req, res) => {
   Product.findByIdAndRemove(req.params.id, (error, deleteProduct) => {
