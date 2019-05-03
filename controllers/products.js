@@ -2,10 +2,17 @@ const express = require('express');
 const router = express.Router();
 const Product = require('../models/product.js');
 const seedItems = require('../models/seedData.js');
+const indexSeed = require('../models/indexSeed.js');
 
-// SEED ROUTE
+// SEED ROUTES
 router.get('/seed/additems', (req, res) => {
   Product.create(seedItems, (error, createdProducts) => {
+    res.redirect('/ootd');
+  })
+})
+
+router.get('/seed/addindex', (req, res) => {
+  Product.create(indexSeed, (error, createdItems) => {
     res.redirect('/ootd');
   })
 })

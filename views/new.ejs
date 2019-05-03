@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/app.css">
-    <title></title>
-  </head>
+
+<head>
+  <% include ./partials/routesheader.ejs %>
+</head>
+
   <body>
-    <div class="header">
-      <h1 class="logo">OOTD</h1><a class="add-link" href="/ootd">Home</a>
-    </div>
+
     <h1>Add a New Product</h1>
     <div class="add-new">
     <form action="/ootd" method="POST">

@@ -2,24 +2,11 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="/app.css">
-  <title></title>
+  <% include ./partials/routesheader.ejs %>
 </head>
 
 <body>
 
-  <div class="header">
-    <h1 class="logo">OOTD</h1>
-    <div class="navigation">
-    <a class="nav-item" href="/ootd/fall">FALL</a>
-    <a class="nav-item" href="/ootd/winter">WINTER</a>
-    <a class="nav-item" href="/ootd/spring">SPRING</a>
-    <a class="nav-item" href="/ootd/summer">SUMMER</a>
-     | <a class="nav-item" href="/ootd/new">ADD ITEM</a>
-     <a class="nav-item" href="/ootd">BACK TO MAIN</a>
-  </div>
-  </div>
   <div class="content">
     <% for (let i = 0; i < products.length; i++) { %>
     <div class="container">

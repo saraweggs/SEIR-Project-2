@@ -7,6 +7,17 @@ img {
   height: auto;
 }
 
+.footer-img {
+  width: 10%;
+  height: auto;
+}
+
+.footer-nav {
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+}
+
 .showImg {
   width: 90%;
   height: auto;
@@ -21,10 +32,20 @@ img {
   font-family: 'Playfair Display', serif;
 }
 
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100px;
+  background-color: black;
+  font-family: 'Playfair Display', serif;
+  color: white;
+  text-decoration: none;
+}
+
 .navigation {
   background-color: white;
   padding: 93px 0 93px 0;
-
 }
 
 .nav-item {
@@ -37,6 +58,7 @@ img {
   margin-left: 10%;
   color: white;
   font-size: 80px;
+  font-weight: 50;
 }
 
 .add-link {
@@ -54,12 +76,18 @@ img {
   width: 80%;
 }
 
+.index-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
 .container {
-  width: 400px;
-  height: 490px;
-  padding: 20px;
+  width: 350px;
+  height: 440px;
+  padding: 10px;
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
   background-color: white;
 }
 
