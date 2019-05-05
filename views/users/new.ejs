@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <% include ../partials/routesheader.ejs %>
+
+  </head>
+  <body>
+
+      <div class="container">
+        <h1>Join Us!</h1>
+        <div class="login-form">
+          <form action="/ootd" method="POST">
+
+                <label for="username">User Name</label><br>
+                <input placeholder="Placeholder" id="username" type="text" class="validate" name="username" required>
+                <br>
+
+                <label for="password">Password</label><br>
+                <input id="password" type="password" class="validate" name="password" required><br>
+
+            <button class="" type="submit" name="action">Submit</button>
+
+          </form>
+        </div>
+
+    </body>
+
+</html>

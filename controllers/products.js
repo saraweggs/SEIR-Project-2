@@ -22,6 +22,13 @@ router.get('/new', (req, res) => {
   res.render('new.ejs')
 })
 
+router.get('/signup', (req, res) => {
+  res.render('users/new.ejs')
+})
+
+router.get('/login', (req, res) => {
+  res.render('sessions/new.ejs')
+})
 
 // INDEX ROUTE
 router.get('/', (req, res) => {

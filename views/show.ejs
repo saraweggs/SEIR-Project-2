@@ -8,10 +8,12 @@
   <body>
 
   <div class="item-box">
-    <div class="show-container">
-
+    <div class="show-img">
       <h1><%=products.name%></h1>
-      <img class="showImg" src="<%=products.img%>" alt="pic"><br />
+      <img class="showImg" src="<%=products.img%>" alt="pic">
+    </div>
+    <div class="item-info">
+      <h2>Details:</h2>
       Brand: <%=products.brand%><br/>
       Season: <%=products.season%><br/>
       Price: $<%=products.price%><br/>
@@ -29,6 +31,7 @@
       <form action="/ootd/<%=products.id%>?_method=DELETE" method="POST">
         <input class="deleteBtn" type="submit" value="Delete Product">
       </form>
+
     </div>
   </div>
 </body>

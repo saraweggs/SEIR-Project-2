@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require('mongoose');
 require('dotenv').config();
 const methodOverride = require('method-override');
-
+const session = require('express-session');
 // CONFIGURATION
 const PORT = process.env.PORT
 const mongoURI = process.env.MONGODB_URI
