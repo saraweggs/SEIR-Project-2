@@ -23,24 +23,27 @@
       <% } %>
 
       <% if (products.price) { %>
-        Price: <%=products.price%><br/>
+        Price: $<%=products.price%><br/>
       <% } %>
       <% if (products.description) { %>
         Description: <%=products.description%><br/>
       <% } %>
-    
+
       <ul>
       <% if (i = 0, i < products.description.length, i++) { %>
         <li><%=products.description[i]%></li>
     <% } %>
     </ul>
-      <a href="<%=products.link%>">Click Here to Purchase</a><br/>
+    <form action="<%=products.link%>">
+      <input class="button" type="submit" value="Additional Product Details">
+    </form>
+
       <form action="/ootd/<%=products.id%>/edit">
-        <input class="button" type="submit" value="Edit Product">
+        <input class="button" type="submit" value="Edit Item Details">
       </form>
 
       <form action="/ootd/<%=products.id%>?_method=DELETE" method="POST">
-        <input class="deleteBtn" type="submit" value="Delete Product">
+        <input class="deleteBtn" type="submit" value="Delete Item">
       </form>
 
     </div>

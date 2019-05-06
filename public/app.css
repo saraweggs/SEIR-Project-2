@@ -47,6 +47,10 @@ h2 {
   font-size: 40px;
 }
 
+.logo-link {
+  text-decoration: none;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -136,10 +140,10 @@ input[type=text] {
 }
 
 .button {
-  background-color: grey;
-  color: white;
+  background-color: white;
+  color: black;
   margin: 5px;
-  border-radius: 5px;
+  border: 1px solid black;
 }
 
 .button:hover {
@@ -148,10 +152,10 @@ input[type=text] {
 }
 
 .deleteBtn {
-  background-color: grey;
+  background-color: black;
   color: white;
   margin: 5px;
-  border-radius: 5px;
+  border: 0px;
 }
 
 .deleteBtn:hover {
