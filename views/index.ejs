@@ -7,10 +7,16 @@
 
 <body>
 
+  <h2>
+    <% if (currentUser) { %>
+        Welcome <%=currentUser.username%>!
+  <%  } %>
+  </h2>
+
   <div class="index-content">
     <% for (let i = 0; i < products.length; i++) { %>
     <div class="container">
-      <%=products[i].name%><br/>
+
       <a href="/ootd/<%=products[i].id%>">
         <img class="index-img" src="<%=products[i].img%>" alt="outfit">
       </a>

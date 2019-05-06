@@ -15,6 +15,11 @@ const mongoURI = process.env.MONGODB_URI
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
+app.use(session({
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitialized: false
+}))
 
 // DATABASE
 mongoose.connect(mongoURI, {useNewUrlParser: true});
@@ -25,6 +30,10 @@ mongoose.connection.once('open', () => {
 // CONTROLLER
 const productsController = require('./controllers/products.js');
 app.use('/ootd', productsController);
+const userController = require('./controllers/users.js');
+app.use('/users', userController);
+const sessionsController = require('./controllers/sessions.js');
+app.use('/sessions', sessionsController);
 
 
 // LISTENER

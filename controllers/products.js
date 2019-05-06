@@ -3,6 +3,10 @@ const router = express.Router();
 const Product = require('../models/product.js');
 const seedItems = require('../models/seedData.js');
 const indexSeed = require('../models/indexSeed.js');
+const user = express.Router();
+const User = require('../models/users.js');
+const sessions = express.Router();
+
 
 // SEED ROUTES
 router.get('/seed/additems', (req, res) => {
@@ -22,21 +26,28 @@ router.get('/new', (req, res) => {
   res.render('new.ejs')
 })
 
-router.get('/signup', (req, res) => {
-  res.render('users/new.ejs')
-})
-
-router.get('/login', (req, res) => {
-  res.render('sessions/new.ejs')
-})
-
 // INDEX ROUTE
 router.get('/', (req, res) => {
   Product.find({}, (error, allProducts) => {
     res.render('index.ejs', {
-      products: allProducts
+      products: allProducts,
+      currentUser: req.session.currentUser
     })
   })
+})
+
+router.get('/', (req, res) => {
+  res.render('index.ejs', {
+    currentUser: req.session.currentUser
+  })
+})
+
+router.get('/', (req, res)=>{
+    if(req.session.currentUser){
+        res.render('/index.ejs')
+    } else {
+        res.redirect('/sessions/new');
+    }
 })
 
 // FALL ROUTE

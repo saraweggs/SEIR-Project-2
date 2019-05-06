@@ -17,9 +17,18 @@
       </div>
       <a class="nav-item" href="/ootd/new">ADD ITEM</a>
       <div class="dropdown">
-      <div class="dropbtn"><a class="nav-item" href="/ootd/login">LOG IN</a>
-        <div class="dropdown-content">
-          <a href="/ootd/signup">SIGN UP</a>
+        <% if (currentUser) { %>
+          <form action="/sessions?_method=DELETE" method="POST">
+              <div class="dropbtn">
+                  <a class="nav-item" href="#"><input class="nav-item" type="submit" value="LOG OUT"></a>
+              </div>
+          </form>
+        <% } else { %>
+          <div class="dropbtn"><a class="nav-item" href="/sessions/new">LOG IN</a>
+            <div class="dropdown-content">
+              <a href="/users/new">SIGN UP</a>
+      <%  } %>
+
         </div>
       </div>
       </div>
