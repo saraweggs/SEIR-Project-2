@@ -43,6 +43,10 @@ img {
   width: 300px;
 }
 
+h2 {
+  font-size: 40px;
+}
+
 .header {
   display: flex;
   justify-content: space-between;

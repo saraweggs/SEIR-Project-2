@@ -14,10 +14,21 @@
     </div>
     <div class="item-info">
       <h2>Details:</h2>
-      Brand: <%=products.brand%><br/>
-      Season: <%=products.season%><br/>
-      Price: $<%=products.price%><br/>
-      Description:
+      <% if (products.brand) { %>
+        Brand: <%=products.brand%><br/>
+      <% } %>
+
+      <% if (products.season) { %>
+        Season: <%=products.season%><br/>
+      <% } %>
+
+      <% if (products.price) { %>
+        Price: <%=products.price%><br/>
+      <% } %>
+      <% if (products.description) { %>
+        Description: <%=products.description%><br/>
+      <% } %>
+    
       <ul>
       <% if (i = 0, i < products.description.length, i++) { %>
         <li><%=products.description[i]%></li>
