@@ -22,20 +22,17 @@
   <div class="content">
     <% for (let i = 0; i < products.length; i++) { %>
     <div class="container">
-      <%=products[i].name%><br />
       <a href="/ootd/<%=products[i].id%>">
         <img class="index-img" src="<%=products[i].img%>" alt="outfit">
-      </a><br />
-            <%=products[i].description%>
-    <br />
-      $<%=products[i].price%><br />
-      <a href="<%=products[i].link%>">Click here to Buy!</a>
+      </a>
     </div>
     <% } %>
   </div>
+
   <footer>
     <% include ./partials/footer.ejs %>
   </footer>
 
   <% include ./partials/modal.ejs %>
+
 </body>
