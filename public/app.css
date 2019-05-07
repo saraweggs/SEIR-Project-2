@@ -232,3 +232,35 @@ input {
 .description {
   text-align: left;
 }
+
+#modal {
+  border: 3px solid black;
+  position: fixed;
+  top: 30%;
+  left: 30%;
+  text-align: center;
+  background-color: white;
+  height: 300px;
+  display: none;
+}
+
+#modal-container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: auto;
+  background-color: white;
+  padding: 15px;
+}
+
+.login {
+  display: flex;
+  text-align: left;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.login-form {
+  width: 500px;
+  padding: 20px;
+}

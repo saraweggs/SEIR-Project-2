@@ -1,6 +1,8 @@
 <meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css?family=Monsieur+La+Doulaise|Playfair+Display" rel="stylesheet">
 <link rel="stylesheet" href="/app.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/app.js"></script>
 <title>OOTD</title>
 <div class="header">
   <a class="logo-link" href="/ootd/"><h1 class="logo">OOTD<span style="font-family:'Monsieur La Doulaise',cursive;font-size:60px;font-weight:100">Inspo</span></h1></a>
@@ -24,9 +26,7 @@
               </div>
           </form>
         <% } else { %>
-          <div class="dropbtn"><a class="nav-item" href="/sessions/new">LOG IN</a>
-            <div class="dropdown-content">
-              <a href="/users/new">SIGN UP</a>
+          <div class="dropbtn"><a id="openModal" class="nav-item" href="#">LOG IN | SIGN UP</a>
       <%  } %>
 
         </div>
