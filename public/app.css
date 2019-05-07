@@ -228,3 +228,7 @@ input {
   font-family: 'Playfair Display', serif;
   font-size: 15px;
 } */
+
+.description {
+  text-align: left;
+}

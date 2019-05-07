@@ -25,13 +25,13 @@
       <% if (products.price) { %>
         Price: $<%=products.price%><br/>
       <% } %>
-      <% if (products.description) { %>
+      <!-- <% if (products.description) { %>
         Description: <%=products.description%><br/>
-      <% } %>
+      <% } %> -->
 
       <ul>
-      <% if (i = 0, i < products.description.length, i++) { %>
-        <li><%=products.description[i]%></li>
+      <% for (let i = 0; i < products.description.length; i++) { %>
+        <li class="description"><%=products.description[i]%></li>
     <% } %>
     </ul>
     <form action="<%=products.link%>">

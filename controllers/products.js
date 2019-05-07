@@ -54,7 +54,8 @@ router.get('/', (req, res)=>{
 router.get('/fall', (req, res) => {
   Product.find({season: 'Fall'}, (error, fallProducts) => {
     res.render('fall.ejs', {
-      products: fallProducts
+      products: fallProducts,
+      currentUser: req.session.currentUser
     })
   })
 })
@@ -63,7 +64,8 @@ router.get('/fall', (req, res) => {
 router.get('/winter', (req, res) => {
   Product.find({season: 'Winter'}, (error, winterProducts) => {
     res.render('winter.ejs', {
-      products: winterProducts
+      products: winterProducts,
+      currentUser: req.session.currentUser
     })
   })
 })
@@ -72,7 +74,8 @@ router.get('/winter', (req, res) => {
 router.get('/spring', (req, res) => {
   Product.find({season: 'Spring'}, (error, springProducts) => {
     res.render('spring.ejs', {
-      products: springProducts
+      products: springProducts,
+      currentUser: req.session.currentUser
     })
   })
 })
@@ -81,7 +84,8 @@ router.get('/spring', (req, res) => {
 router.get('/summer', (req, res) => {
   Product.find({season: 'Summer'}, (error, summerProducts) => {
     res.render('summer.ejs', {
-      products: summerProducts
+      products: summerProducts,
+      currentUser: req.session.currentUser
     })
   })
 })
@@ -105,7 +109,8 @@ router.put('/:id', (req, res) => {
 router.get('/:id/edit', (req, res) => {
   Product.findById(req.params.id, (error, editProduct) => {
     res.render('edit.ejs', {
-      products: editProduct
+      products: editProduct,
+      currentUser: req.session.currentUser
     })
   })
 })
@@ -114,7 +119,8 @@ router.get('/:id/edit', (req, res) => {
 router.get('/:id', (req, res) => {
   Product.findById(req.params.id, (error, showProduct) => {
     res.render('show.ejs', {
-      products: showProduct
+      products: showProduct,
+      currentUser: req.session.currentUser
     })
   })
 })
