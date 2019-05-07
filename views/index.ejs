@@ -10,9 +10,9 @@
   <h2 class="welcome">
     <% if (currentUser) { %>
         Hi <%=currentUser.username%>!
-        <form action="ootd/collection" method="">
-                <a class="welcome-item" href=""><input class="navBtn" type="submit" value="MY COLLECTION"></a>
-        </form>
+
+                <a class="collect-link" href="/ootd/collection">MY COLLECTION</a>
+
         <form action="/sessions?_method=DELETE" method="POST">
                 <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="LOG OUT"></a>
         </form>

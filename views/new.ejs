@@ -1,43 +1,48 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
-<% include ./partials/header.ejs %>
+  <% include ./partials/header.ejs %>
 </head>
 
 <body>
 
   <h2 class="welcome">
     <% if (currentUser) { %>
-        Hi <%=currentUser.username%>!
-        <form action="" method="">
-                <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="MY COLLECTION"></a>
-        </form>
-        <form action="/sessions?_method=DELETE" method="POST">
-                <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="LOG OUT"></a>
-        </form>
-  <%  } %>
+    Hi <%=currentUser.username%>!
+    <form action="" method="">
+      <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="MY COLLECTION"></a>
+    </form>
+    <form action="/sessions?_method=DELETE" method="POST">
+      <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="LOG OUT"></a>
+    </form>
+    <%  } %>
   </h2>
 
-<h1>Add a New Product</h1>
-<div class="add-new">
-<form action="/ootd" method="POST">
-  <div class="add-boxes">Name: <input type="text" name="name"/><br/></div>
-  <div class="add-boxes">Brand: <input type="text" name="brand"><br/></div>
-  <div class="add-boxes">Season: <input type="text" name="season"/><br/></div>
-  <div class="add-boxes">Description: <input type="text" name="description"/><br/></div>
-  <div class="add-boxes">Image: <input type="text" name="img"/><br/></div>
-  <div class="add-boxes">Price: <input type="text" name="price"/><br/></div>
-  <div class="add-boxes">Link: <input type="text" name="link"/><br/>
-  <input class="button" type="submit" value="Create New Item">
-</form>
-</div>
 
-<footer>
-  <% include ./partials/footer.ejs %>
-</footer>
+  <div class="add-new">
+    <h1>Add a New Product</h1>
+    <form action="/ootd" method="POST">
+      <div class="add-boxes">Name:<br /> <input type="text" name="name" /><br /></div>
+      <div class="add-boxes">Brand:<br /> <input type="text" name="brand"><br /></div>
+      <div class="add-boxes">Season:<br /> <input type="text" name="season" /><br /></div>
+      <div class="add-boxes">Description:<br /> <input type="text" name="description" /><br /></div>
+      <div class="add-boxes">Image:<br /> <input type="text" name="img" /><br /></div>
+      <div class="add-boxes">Price:<br /> <input type="text" name="price" /><br /></div>
+      <div class="add-boxes">Link:<br />
+        <input type="text" name="link" /><br />
+        <% if (currentUser) { %>
+        <div>Add to Collection: <input type="checkbox" name="collect"><br /></div>
+        <% } %>
+        <input class="button" type="submit" value="Create New Item">
+    </form>
+  </div>
+  </div>
+  <footer>
+    <% include ./partials/footer.ejs %>
+  </footer>
 
-<% include ./partials/modal.ejs %>
+  <% include ./partials/modal.ejs %>
 </body>
+
 </html>

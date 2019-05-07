@@ -7,6 +7,11 @@ img {
   height: auto;
 }
 
+.index-img {
+  width: 90%;
+  height: auto;
+}
+
 .footer-img {
   width: 10%;
   height: auto;
@@ -56,6 +61,7 @@ h2 {
   color: white;
   padding-right: 5px;
   margin-top: 0;
+  text-decoration: none;
 }
 
 .navBtn {
@@ -75,6 +81,18 @@ h2 {
 
 .welcome-item {
   padding: 5px;
+}
+
+.collect-link {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.collect-link:hover {
+  background-color: white;
+  color: black;
 }
 
 .logo-link {
@@ -132,15 +150,20 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
+  justify-content: center;
 }
 
 .container {
-  width: 350px;
-  height: 440px;
-  padding: 10px;
+  width: 325px;
+  height: auto;
+  padding: 5px;
   text-align: center;
   font-size: 15px;
   background-color: white;
+}
+
+.index-img:hover{
+  opacity: 0.7;
 }
 
 .show-container {
@@ -154,14 +177,19 @@ h2 {
 
 .edit-boxes, .add-boxes {
   padding: 10px;
+  width: 100%;
 }
 
 input[type=text] {
   width: 90%;
 }
 
+input[type=password] {
+  width: 90%;
+}
+
 .add-new, .edit {
-  width: 40%;
+  width: 50%;
   height: auto;
 }
 
@@ -217,23 +245,15 @@ input {
   text-decoration: none;
   display: block;
   padding-right: 50px;
-  align-items: center;
 }
 
 .dropdown-content a:hover {
   background-color: grey;
   padding-right: 50px;
-  align-items: center;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: black;
-  color: pink;
-  font-weight: 600;
 }
 
 .nav-bar {
@@ -251,13 +271,9 @@ input {
   margin-right: 15px;
 }
 
-/* .logout {
-  border: 1px solid pink;
-  color: white;
-  background-color: black;
-  font-family: 'Playfair Display', serif;
-  font-size: 15px;
-} */
+.nav-item:hover {
+  color: lightgrey;
+}
 
 .description {
   text-align: left;
@@ -272,6 +288,8 @@ input {
   background-color: white;
   height: 300px;
   display: none;
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 #modal-container {
@@ -290,7 +308,57 @@ input {
   flex-direction: row;
 }
 
+#close {
+  text-decoration: none;
+  text-align: center;
+  height: 25px;
+  width: 100px;
+  background-color: black;
+  color: white;
+}
+
+#close:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
 .login-form {
   width: 500px;
   padding: 20px;
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+
+
+
 }

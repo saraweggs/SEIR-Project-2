@@ -4,7 +4,6 @@ $(() => {
 const $openBtn = $('#openModal');
 const $modal = $('#modal');
 const $closeBtn = $('#close');
-const $collectBtn = $('#collect');
 
 
 // EVENT HANDLERS
@@ -23,6 +22,5 @@ const collectItem = () => {
 // EVENT LISTENER
 $openBtn.on('click', openModal);
 $closeBtn.on('click', closeModal)
-$collectBtn.on('click', collectItem)
 
 })

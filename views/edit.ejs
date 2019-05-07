@@ -5,39 +5,44 @@
   <% include ./partials/header.ejs %>
 </head>
 
-  <body class="edit-page">
+<body class="edit-page">
 
-    <h2 class="welcome">
-      <% if (currentUser) { %>
-          Hi <%=currentUser.username%>!
-          <form action="" method="">
-                  <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="MY COLLECTION"></a>
-          </form>
-          <form action="/sessions?_method=DELETE" method="POST">
-                  <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="LOG OUT"></a>
-          </form>
+  <h2 class="welcome">
+    <% if (currentUser) { %>
+    Hi <%=currentUser.username%>!
+    <form action="" method="">
+      <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="MY COLLECTION"></a>
+    </form>
+    <form action="/sessions?_method=DELETE" method="POST">
+      <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="LOG OUT"></a>
+    </form>
     <%  } %>
-    </h2>
+  </h2>
 
-     <h1>Edit Item</h1>
-     <div class="edit">
-     <form action="/ootd/<%=products.id%>?_method=PUT" method="POST">
-       <div class="edit-boxes">Name: <input type="text" name="name" value="<%=products.name%>"><br/></div>
-       <div class="edit-boxes">Brand: <input type="text" name="brand" value="<%=products.brand%>"><br/></div>
-       <div class="edit-boxes">Season:<input type="text" name="season" value="<%=products.season%>"><br/></div>
-       <div class="edit-boxes">Description: <input type="text" name="description" value="<%=products.description%>"><br/></div>
-       <div class="edit-boxes">Image: <input type="text" name="img" value="<%=products.img%>"><br/></div>
-       <div class="edit-boxes">Link:<input type="text" name="link" value="<%=products.link%>"><br/></div>
-       <div>Add to Collection: <input type="checkbox" name="collection"><br/></div>
-       <input class="button" type="submit" value="Edit Product">
-     </form>
-   </div>
 
-   <footer>
-     <% include ./partials/footer.ejs %>
-   </footer>
+  <div class="edit">
+    <h1>Edit Item</h1>
+    <form action="/ootd/<%=products.id%>?_method=PUT" method="POST">
+      <div class="edit-boxes">Name:<br /> <input type="text" name="name" value="<%=products.name%>"><br /></div>
+      <div class="edit-boxes">Brand:<br /> <input type="text" name="brand" value="<%=products.brand%>"><br /></div>
+      <div class="edit-boxes">Season:<br /><input type="text" name="season" value="<%=products.season%>"><br /></div>
+      <div class="edit-boxes">Description:<br /> <input type="text" name="description" value="<%=products.description%>"><br /></div>
+      <div class="edit-boxes">Image:<br /> <input type="text" name="img" value="<%=products.img%>"><br /></div>
+      <div class="edit-boxes">Link: <br />
+        <input type="text" name="link" value="<%=products.link%>"><br /></div>
+      <% if (currentUser) { %>
+      <div>Add to Collection: <input type="checkbox" name="collect"><br /></div>
+      <% } %>
+      <input class="button" type="submit" value="Edit Product">
+    </form>
+  </div>
 
-   <% include ./partials/modal.ejs %>
+  <footer>
+    <% include ./partials/footer.ejs %>
+  </footer>
 
-   </body>
+  <% include ./partials/modal.ejs %>
+
+</body>
+
 </html>

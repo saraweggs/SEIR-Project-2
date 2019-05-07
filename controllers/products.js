@@ -95,16 +95,20 @@ router.get('/summer', (req, res) => {
 // COLLECT ROUTE
 router.get('/collection', (req, res) => {
   Product.find({collect: true}, (error, showCollection) => {
-    res.render('collection.ejs', {
-      products: showCollection,
-      currentUser: req.session.currentUser
-    })
+    if (req.session.currentUser) {
+      res.render('collection.ejs', {
+        products: showCollection,
+        currentUser: req.session.currentUser
+      })
+    } else {
+      res.render('index.ejs', {
+        products: showCollection,
+        currentUser: req.session.currentUser
+      })
+    }
   })
 })
 
-router.get('/:id', (req, res) => {
-  Product.findByIdAndUpdate()
-})
 
 // DELETE ROUTE
 router.delete('/:id', (req, res) => {
