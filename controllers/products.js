@@ -92,6 +92,20 @@ router.get('/summer', (req, res) => {
   })
 })
 
+// COLLECT ROUTE
+router.get('/collection', (req, res) => {
+  Product.find({collect: true}, (error, showCollection) => {
+    res.render('collection.ejs', {
+      products: showCollection,
+      currentUser: req.session.currentUser
+    })
+  })
+})
+
+router.get('/:id', (req, res) => {
+  Product.findByIdAndUpdate()
+})
+
 // DELETE ROUTE
 router.delete('/:id', (req, res) => {
   Product.findByIdAndRemove(req.params.id, (error, deleteProduct) => {
@@ -100,6 +114,11 @@ router.delete('/:id', (req, res) => {
 })
 
 router.put('/:id', (req, res) => {
+  if (req.body.collect === 'on') {
+    req.body.collect = true;
+  } else {
+    req.body.collect = false;
+  }
   Product.findByIdAndUpdate(req.params.id, req.body, {
     new: true
   }, (error, updatedModel) => {
@@ -129,6 +148,11 @@ router.get('/:id', (req, res) => {
 
 // CREATE ROUTE
 router.post('/', (req, res) => {
+  if (req.body.collection === 'on') {
+    req.body.collect = true;
+  } else {
+    req.body.collect = false;
+  }
   Product.create(req.body, (error, createProduct) => {
     res.redirect('/ootd')
   })

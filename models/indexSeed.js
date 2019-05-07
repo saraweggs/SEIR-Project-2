@@ -6,7 +6,7 @@ module.exports = [
     description: ['Cream oversized sweater', 'Black leggings', 'Knee high brown boots'],
     img: 'https://i.pinimg.com/564x/fe/71/0c/fe710c346836251ababc7244e3fccc85.jpg',
     price: '',
-    link: ''
+    link: '',
   },
   {
     name: '',
