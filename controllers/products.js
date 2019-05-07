@@ -23,7 +23,9 @@ router.get('/seed/addindex', (req, res) => {
 
 // NEW ROUTE
 router.get('/new', (req, res) => {
-  res.render('new.ejs')
+  res.render('new.ejs', {
+    currentUser: req.session.currentUser
+  })
 })
 
 // INDEX ROUTE

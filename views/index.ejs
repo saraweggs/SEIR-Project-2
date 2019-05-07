@@ -7,9 +7,15 @@
 
 <body>
 
-  <h2>
+  <h2 class="welcome">
     <% if (currentUser) { %>
-        Welcome <%=currentUser.username%>!
+        Hi <%=currentUser.username%>!
+        <form action="" method="">
+                <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="MY COLLECTION"></a>
+        </form>
+        <form action="/sessions?_method=DELETE" method="POST">
+                <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="LOG OUT"></a>
+        </form>
   <%  } %>
   </h2>
 
@@ -26,46 +32,6 @@
     <% include ./partials/footer.ejs %>
   </footer>
 
-  <div id="modal">
-  <div id="modal-container">
-    <div class="login">
-      <a id="close" href="">Close</a>
-      <div class="login-form">
-      <h3>Join OOTD!</h3>
-
-        <form action="/users" method="POST">
-
-              <label for="username">User Name</label><br>
-              <input placeholder="Username" id="username" type="text" class="validate" name="username" required>
-              <br>
-
-              <label for="password">Password</label><br>
-              <input id="password" type="password" class="validate" name="password" required><br>
-
-          <button class="button" type="submit" name="action">Register</button>
-
-        </form>
-      </div>
-      <div class="login-form">
-      <h3>Log In!</h3>
-
-        <form action="/sessions" method="POST">
-
-              <label for="username">User Name</label><br>
-              <input placeholder="Username" id="username" type="text" class="validate" name="username" required>
-              <br>
-
-              <label for="password">Password</label><br>
-              <input id="password" type="password" class="validate" name="password" required><br>
-
-          <button class="button" type="submit" name="action">Log In</button>
-
-        </form>
-      </div>
-    </div>
-
-  </div>
-</div>
-</div>
+  <% include ./partials/modal.ejs %>
 
 </body>

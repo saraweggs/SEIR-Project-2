@@ -3,10 +3,22 @@
 <html lang="en" dir="ltr">
 
 <head>
-<% include ./partials/routesheader.ejs %>
+<% include ./partials/header.ejs %>
 </head>
 
 <body>
+
+  <h2 class="welcome">
+    <% if (currentUser) { %>
+        Hi <%=currentUser.username%>!
+        <form action="" method="">
+                <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="MY COLLECTION"></a>
+        </form>
+        <form action="/sessions?_method=DELETE" method="POST">
+                <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="LOG OUT"></a>
+        </form>
+  <%  } %>
+  </h2>
 
 <h1>Add a New Product</h1>
 <div class="add-new">
@@ -21,5 +33,11 @@
   <input class="button" type="submit" value="Create New Item">
 </form>
 </div>
+
+<footer>
+  <% include ./partials/footer.ejs %>
+</footer>
+
+<% include ./partials/modal.ejs %>
 </body>
 </html>

@@ -44,7 +44,37 @@ img {
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 20px;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: baseline;
+  background: black;
+  color: white;
+  padding-right: 5px;
+  margin-top: 0;
+}
+
+.navBtn {
+  background: black;
+  color: white;
+  border: none;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.navBtn:hover {
+  background: white;
+  color: black;
+  font-family: 'Playfair Display', serif;
+}
+
+.welcome-item {
+  padding: 5px;
 }
 
 .logo-link {

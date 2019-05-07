@@ -20,11 +20,7 @@
       <a class="nav-item" href="/ootd/new">ADD ITEM</a>
       <div class="dropdown">
         <% if (currentUser) { %>
-          <form action="/sessions?_method=DELETE" method="POST">
-              <div class="dropbtn">
-                  <a class="nav-item" href="#"><input class="nav-item" type="submit" value="LOG OUT"></a>
-              </div>
-          </form>
+          
         <% } else { %>
           <div class="dropbtn"><a id="openModal" class="nav-item" href="#">LOG IN | SIGN UP</a>
       <%  } %>
