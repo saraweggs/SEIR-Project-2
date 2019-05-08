@@ -162,7 +162,7 @@ h2 {
   width: 80%;
 }
 
-.index-content {
+.index-content, .collect-content {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
@@ -193,9 +193,9 @@ h2 {
 }
 
 .add-new, .edit, .about, .contact, .collect-content {
-  height: 70%;
+  height: auto;
   margin-left: 30px;
-  min-height: 50%;
+  min-height: 100%;
 }
 
 .about, .contact {
