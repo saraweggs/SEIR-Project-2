@@ -94,6 +94,7 @@ h2 {
   color: white;
   padding: 5px;
   font-size: 15px;
+  height: 25px;
 }
 
 .collect-link:hover {
@@ -123,6 +124,15 @@ h2 {
   font-family: 'Playfair Display', serif;
   color: white;
   text-decoration: none;
+}
+
+.footer-img {
+  width: 25px;
+  padding-left: 10px;
+}
+
+.footer > a:hover {
+  color: grey;
 }
 
 .navigation {
@@ -182,10 +192,24 @@ h2 {
   margin: 0 auto;
 }
 
-.add-new, .edit, .about, .contact {
+.add-new, .edit, .about, .contact, .collect-content {
   height: 70%;
   margin-left: 30px;
   min-height: 50%;
+}
+
+.about, .contact {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+}
+
+#aboutImg {
+  width: 350px;
+  height: auto;
+  margin-left: 30%;
+  box-shadow: none;
 }
 
 .edit-boxes, .add-boxes {
@@ -281,7 +305,7 @@ input {
 }
 
 .nav-item:hover {
-  color: lightgrey;
+  color: grey;
 }
 
 .description {
@@ -420,7 +444,7 @@ input {
     font-size: 30px;
   }
 
-  .add-new, .edit, .about, .contact {
+  .add-new, .edit, .about, .contact, .collect-content {
     height: 80%;
     margin-left: 30px;
     min-height: 70%;
@@ -438,6 +462,18 @@ input {
   }
 
   .item-info > h2 {
+    font-size: 35px;
+  }
+
+  .about {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 35px;
+  }
+
+  .contact {
+    width: 80%;
+    margin: 0 auto;
     font-size: 35px;
   }
 }

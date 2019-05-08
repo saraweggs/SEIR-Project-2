@@ -7,17 +7,18 @@
 
 <body class="edit-page">
 
-  <h2 class="welcome">
+  <div class="welcome">
+    <h2>
     <% if (currentUser) { %>
     Hi <%=currentUser.username%>!
-    <form action="" method="">
-      <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="MY COLLECTION"></a>
-    </form>
+  </h2>
+    <a class="collect-link" href="/ootd/collection">MY COLLECTION</a>
+
     <form action="/sessions?_method=DELETE" method="POST">
       <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="LOG OUT"></a>
     </form>
     <%  } %>
-  </h2>
+  </div>
 
 
   <div class="edit">
@@ -26,12 +27,17 @@
       <div class="edit-boxes">Name:<br /> <input type="text" name="name" value="<%=products.name%>"><br /></div>
       <div class="edit-boxes">Brand:<br /> <input type="text" name="brand" value="<%=products.brand%>"><br /></div>
       <div class="edit-boxes">Season:<br /><input type="text" name="season" value="<%=products.season%>"><br /></div>
+      <div class="edit-boxes">Price:<br /><input type="text" name="price" value="<%=products.price%>"><br /></div>
       <div class="edit-boxes">Description:<br /> <input type="text" name="description" value="<%=products.description%>"><br /></div>
       <div class="edit-boxes">Image:<br /> <input type="text" name="img" value="<%=products.img%>"><br /></div>
       <div class="edit-boxes">Link: <br />
         <input type="text" name="link" value="<%=products.link%>"><br /></div>
       <% if (currentUser) { %>
-      <div>Add to Collection: <input type="checkbox" name="collect"><br /></div>
+      <div>Add to Collection: <input type="checkbox" name="collect"
+          <% if (products.collect === true) { %>
+            checked
+          <% } %>
+        ><br /></div>
       <% } %>
       <input class="button" type="submit" value="Edit Product">
     </form>

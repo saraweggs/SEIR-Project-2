@@ -7,21 +7,27 @@
 
 <body class="edit-page">
 
-  <h2 class="welcome">
+  <div class="welcome">
+    <h2>
     <% if (currentUser) { %>
     Hi <%=currentUser.username%>!
-    <form action="" method="">
-      <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="MY COLLECTION"></a>
-    </form>
+  </h2>
+    <a class="collect-link" href="/ootd/collection">MY COLLECTION</a>
+
     <form action="/sessions?_method=DELETE" method="POST">
       <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="LOG OUT"></a>
     </form>
     <%  } %>
-  </h2>
+  </div>
 
 
   <div class="contact">
     <h1>Contact the OOTD Team</h1>
+    <h3>Thanks for stopping by! If you have any questions or issues with the OOTD Inspo app, please let us know!</h3>
+    <ul>
+      <li>Email: support@ootdinspo.com</li>
+      <li>User Support: 888-555-3492</li>
+    </ul>
   </div>
 
   <footer>

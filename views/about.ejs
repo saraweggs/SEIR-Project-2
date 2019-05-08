@@ -7,21 +7,30 @@
 
 <body class="edit-page">
 
-  <h2 class="welcome">
+
+  <div class="welcome">
+    <h2>
     <% if (currentUser) { %>
     Hi <%=currentUser.username%>!
-    <form action="" method="">
-      <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="MY COLLECTION"></a>
-    </form>
+  </h2>
+    <a class="collect-link" href="/ootd/collection">MY COLLECTION</a>
+
     <form action="/sessions?_method=DELETE" method="POST">
       <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="LOG OUT"></a>
     </form>
     <%  } %>
-  </h2>
+  </div>
 
 
   <div class="about">
     <h1>About OOTD Inspo</h1>
+    <h2>What is OOTD?</h2>
+    <ul>
+      <li>OOTD: Outfit Of The Day</li>
+    </ul>
+    <p>OOTD Inspo is a place where women can come for Inspiration on all things fashion. Whether you're needing ideas for an event coming up, a vacation, office attire, or even just a wardrobe revamp, OOTD Inspo has you covered. Post your own outfits to give other women inspiration! Grab things you love and add them to your personal collection. If you see something posted and you know the brand or where to buy it, edit the post and let us know!</p>
+
+    <img id="aboutImg" src="https://i.pinimg.com/236x/1d/c9/63/1dc963bb9758440da0efc09969300868--text-quotes-words-quotes.jpg" alt="Fashion Quote">
   </div>
 
   <footer>
