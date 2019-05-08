@@ -52,6 +52,26 @@ router.get('/', (req, res)=>{
     }
 })
 
+// ABOUT ROUTE
+router.get('/about', (req, res) => {
+  Product.find({}, (error, aboutProducts) => {
+    res.render('about.ejs', {
+      products: aboutProducts,
+      currentUser: req.session.currentUser
+    })
+  })
+})
+
+// CONTACT ROUTE
+router.get('/contact', (req, res) => {
+  Product.find({}, (error, aboutProducts) => {
+    res.render('contact.ejs', {
+      products: aboutProducts,
+      currentUser: req.session.currentUser
+    })
+  })
+})
+
 // FALL ROUTE
 router.get('/fall', (req, res) => {
   Product.find({season: 'Fall'}, (error, fallProducts) => {
@@ -161,5 +181,8 @@ router.post('/', (req, res) => {
     res.redirect('/ootd')
   })
 })
+
+
+
 
 module.exports = router;

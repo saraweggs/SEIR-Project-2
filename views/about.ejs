@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <% include ./partials/header.ejs %>
+</head>
+
+<body class="edit-page">
+
+  <h2 class="welcome">
+    <% if (currentUser) { %>
+    Hi <%=currentUser.username%>!
+    <form action="" method="">
+      <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="MY COLLECTION"></a>
+    </form>
+    <form action="/sessions?_method=DELETE" method="POST">
+      <a class="welcome-item" href="#"><input class="navBtn" type="submit" value="LOG OUT"></a>
+    </form>
+    <%  } %>
+  </h2>
+
+
+  <div class="about">
+    <h1>About OOTD Inspo</h1>
+  </div>
+
+  <footer>
+    <% include ./partials/footer.ejs %>
+  </footer>
+
+  <% include ./partials/modal.ejs %>
+
+</body>
+
+</html>

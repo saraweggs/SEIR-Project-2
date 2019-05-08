@@ -12,7 +12,7 @@ sessions.post('/', (req, res) => {
       req.session.currentUser = foundUser
       res.redirect('/ootd')
     } else {
-      res.send('<a href="/">wrong password</a>')
+      res.send('<a href="/">Incorrect Password!</a>')
     }
   });
 });

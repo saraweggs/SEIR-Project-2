@@ -8,6 +8,7 @@ html, body {
 img {
   width: 70%;
   height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .index-img {
@@ -48,8 +49,9 @@ img {
 }
 
 .item-info {
+  display: flex;
+  flex-direction: column;
   width: 300px;
-  margin-top: -400px;
 }
 
 h2 {
@@ -180,14 +182,15 @@ h2 {
   margin: 0 auto;
 }
 
-.add-page, .edit-page {
-  overflow: auto;
-  min-height: 100%;
+.add-new, .edit, .about, .contact {
+  height: 70%;
+  margin-left: 30px;
+  min-height: 50%;
 }
 
 .edit-boxes, .add-boxes {
   padding: 10px;
-  width: 100%;
+  width: 50%;
 }
 
 input[type=text] {
@@ -196,11 +199,6 @@ input[type=text] {
 
 input[type=password] {
   width: 90%;
-}
-
-.add-new, .edit {
-  width: 50%;
-  height: auto;
 }
 
 .item-box {
@@ -299,6 +297,7 @@ input {
   background-color: white;
   height: 300px;
   display: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -308,7 +307,6 @@ input {
   flex-direction: column;
   width: 600px;
   height: auto;
-  background-color: white;
   padding: 15px;
 }
 
@@ -317,6 +315,7 @@ input {
   text-align: left;
   justify-content: space-evenly;
   flex-direction: row;
+  opacity: 1;
 }
 
 #close {
@@ -390,5 +389,55 @@ input {
 
   .nav-bar {
     font-size: 25px;
+  }
+
+  .item-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+  }
+
+  .item-info {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+  #modal {
+    top: 5;
+    left: 5%;
+    height: auto;
+  }
+
+  #modal-container {
+    width: 800px;
+    height: auto;
+  }
+
+  .login-form {
+    font-size: 30px;
+  }
+
+  .add-new, .edit, .about, .contact {
+    height: 80%;
+    margin-left: 30px;
+    min-height: 70%;
+    font-size: 40px;
+  }
+
+  .edit-boxes, .add-boxes {
+    padding: 10px;
+    width: 50%;
+  }
+
+  .item-info {
+    width: 40%;
+    font-size: 30px;
+  }
+
+  .item-info > h2 {
+    font-size: 35px;
   }
 }
