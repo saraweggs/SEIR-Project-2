@@ -1,41 +1,41 @@
 <div id="modal">
-<div id="modal-container">
-  <div class="login">
-    <a id="close" href="">Close</a>
-    <div class="login-form">
-    <h3>Join OOTD!</h3>
+  <div id="modal-container">
+    <div class="login">
+      <a id="close" href="">Close</a>
+      <div class="login-form">
+        <h3>Join OOTD!</h3>
 
-      <form action="/users" method="POST">
+        <form action="/users" method="POST">
 
-            <label for="username">User Name</label><br>
-            <input placeholder="Username" id="username" type="text" class="validate" name="username" required>
-            <br>
+          <label for="username">User Name</label><br>
+          <input placeholder="Username" id="username" type="text" class="validate" name="username" required>
+          <br>
 
-            <label for="password">Password</label><br>
-            <input id="password" type="password" class="validate" name="password" required><br>
+          <label for="password">Password</label><br>
+          <input id="password" type="password" class="validate" name="password" required><br>
 
-        <button class="button" type="submit" name="action">Register</button>
+          <button class="button" type="submit" name="action">Register</button>
 
-      </form>
+        </form>
+      </div>
+      <div class="login-form">
+        <h3>Log In!</h3>
+
+        <form action="/sessions" method="POST">
+
+          <label for="username">User Name</label><br>
+          <input placeholder="Username" id="username" type="text" class="validate" name="username" required>
+          <br>
+
+          <label for="password">Password</label><br>
+          <input id="password" type="password" class="validate" name="password" required><br>
+
+          <button class="button" type="submit" name="action">Log In</button>
+
+        </form>
+      </div>
     </div>
-    <div class="login-form">
-    <h3>Log In!</h3>
 
-      <form action="/sessions" method="POST">
-
-            <label for="username">User Name</label><br>
-            <input placeholder="Username" id="username" type="text" class="validate" name="username" required>
-            <br>
-
-            <label for="password">Password</label><br>
-            <input id="password" type="password" class="validate" name="password" required><br>
-
-        <button class="button" type="submit" name="action">Log In</button>
-
-      </form>
-    </div>
   </div>
-
-</div>
 </div>
 </div>

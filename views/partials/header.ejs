@@ -5,9 +5,11 @@
 <script src="/app.js"></script>
 <title>OOTD</title>
 <div class="header">
-  <a class="logo-link" href="/ootd/"><h1 class="logo">OOTD<span style="font-family:'Monsieur La Doulaise',cursive;font-size:60px;font-weight:100">Inspo</span></h1></a>
+  <a class="logo-link" href="/ootd/">
+    <h1 class="logo">OOTD<span style="font-family:'Monsieur La Doulaise',cursive;font-size:60px;font-weight:100">Inspo</span></h1>
+  </a>
   <div class="nav-bar">
-  <div class="dropdown">
+    <div class="dropdown">
       <div class="dropbtn"><a class="nav-item" href="#">SHOP BY SEASON</a>
         <div class="dropdown-content">
           <a href="/ootd/fall">FALL</a>
@@ -16,18 +18,18 @@
           <a href="/ootd/summer">SUMMER</a>
         </div>
       </div>
-      </div>
-      <a class="nav-item" href="/ootd/new">ADD ITEM</a>
-      <div class="dropdown">
-        <% if (currentUser) { %>
-          
-        <% } else { %>
-          <div class="dropbtn"><a id="openModal" class="nav-item" href="#">LOG IN | SIGN UP</a>
-      <%  } %>
+    </div>
+    <a class="nav-item" href="/ootd/new">ADD ITEM</a>
+    <div class="dropdown">
+      <% if (currentUser) { %>
 
-        </div>
+      <% } else { %>
+      <div class="dropbtn"><a id="openModal" class="nav-item" href="#">LOG IN | SIGN UP</a>
+        <%  } %>
+
       </div>
-      </div>
-      </div>
+    </div>
+  </div>
+</div>
 
 </div>

@@ -1,30 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
 
-    <% include ../partials/routesheader.ejs %>
+<head>
 
-  </head>
-  <body>
+  <% include ../partials/header.ejs %>
 
-      <div class="container">
-        <h1>Log In!</h1>
-        <div class="login-form">
-          <form action="/sessions" method="POST">
+</head>
 
-                <label for="username">User Name</label><br>
-                <input placeholder="Placeholder" id="username" type="text" class="validate" name="username" required>
-                <br>
+<body>
 
-                <label for="password">Password</label><br>
-                <input id="password" type="password" class="validate" name="password" required><br>
+  <div class="container">
+    <h1>Log In!</h1>
+    <div class="login-form">
+      <form action="/sessions" method="POST">
 
-            <button class="button" type="submit" name="action">Log In</button>
+        <label for="username">User Name</label><br>
+        <input placeholder="Placeholder" id="username" type="text" class="validate" name="username" required>
+        <br>
 
-          </form>
-        </div>
+        <label for="password">Password</label><br>
+        <input id="password" type="password" class="validate" name="password" required><br>
 
-    </body>
+        <button class="button" type="submit" name="action">Log In</button>
+
+      </form>
+    </div>
+
+</body>
 
 </html>
