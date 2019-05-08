@@ -5,7 +5,7 @@ const productSchema = new mongoose.Schema({
   brand: String,
   season: String,
   description: Array,
-  img: String,
+  img: {type: String, required: true},
   price: Number,
   link: String,
   collect: Boolean
